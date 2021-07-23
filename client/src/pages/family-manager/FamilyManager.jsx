@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function temp() {
-    return (
-        <div>
-            Hello
-        </div>
-    )
+function FamilyManager() {
+  return <div>Hello</div>;
 }
 
-export default temp
+export default FamilyManager;
