@@ -3,7 +3,7 @@ import React from "react";
 function Investment() {
   return (
     <div>
-      <div>Hi</div>
+      <div>Hiii</div>
     </div>
   );
 }

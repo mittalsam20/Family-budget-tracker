@@ -1,14 +1,16 @@
-import "./App.css";
+import "./App.scss";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Home from "./pages/home/Home";
 import Investment from "./pages/investment/Investment";
 import News from "./pages/news/News";
 import FamilyManager from "./pages/family-manager/FamilyManager";
+import Topbar from "./component/topbar/Topbar";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <Topbar />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/investment" exact component={Investment} />
