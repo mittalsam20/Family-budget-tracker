@@ -7,6 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import "./cards.css";
 const useStyles = makeStyles({
   root: {
+    minWidth: 290,
     maxWidth: 290,
   },
 });
@@ -29,8 +30,7 @@ const HomeCards = (props) => {
             </Typography>
 
             <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              Month:
             </Typography>
           </CardContent>
         </CardActionArea>

@@ -5,12 +5,12 @@ import Home from "./pages/home/home";
 import Investment from "./pages/investment/Investment";
 import News from "./pages/news/News";
 import FamilyManager from "./pages/family-manager/FamilyManager";
-import Topbar from "./component/topbar/Topbar";
+import Navbar from "./component/navbar/navbar";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Topbar />
+      <Navbar />
       <Switch>
         {/* <Route path="/" exact component={signup} /> */}
         <Route path="/" exact component={Home} />
