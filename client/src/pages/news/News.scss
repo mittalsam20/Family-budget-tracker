@@ -6,10 +6,19 @@
     .news-left{
         flex: 9;
         background-color: lightblue;
+        overflow: scroll;
+        height: 100vh;
+        
     }
 
     .news-right{
         flex: 3;
         background-color: lightcoral;
+        overflow: scroll;
+        height: 100vh;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
 }
