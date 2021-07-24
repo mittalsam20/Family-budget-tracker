@@ -1,13 +1,11 @@
-// import "./Topbar.scss";
+// import "./navbar.scss";
 // import { Link } from "react-router-dom";
-// import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
@@ -23,9 +21,6 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-  },
-  hamburger: {
-    fontSize: "30px",
   },
 }));
 
@@ -56,6 +51,7 @@ const Navbar = () => {
             LOGO
           </Typography>
           {/* ------------------------------------------PROFILE PHOTO KA BUTTON--------------------- */}
+          <p>Hello,User</p>
           <div>
             <IconButton
               aria-label="account of current user"
@@ -76,7 +72,7 @@ const Navbar = () => {
               }}
               keepMounted
               transformOrigin={{
-                vertical: "top",
+                vertical: "bottom",
                 horizontal: "right",
               }}
               open={open}
@@ -87,8 +83,7 @@ const Navbar = () => {
             </Menu>
           </div>
           {/* ------------------------------------------HAMBURGER MENU KA BUTTON--------------------- */}
-
-          <Rightdrawer className={classes.hamburger} />
+          <Rightdrawer style={{ color: "white" }} />
         </Toolbar>
       </AppBar>
     </div>
