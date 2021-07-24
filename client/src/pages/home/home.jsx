@@ -1,6 +1,8 @@
 import React from "react";
 import "./home.css";
 import HomeCards from "../../component/cards/homeCards";
+import Inexcrud from "../../component/inexcrud/inexcrud";
+import Homegraphs from "../../component/homegraphs/homegraphs";
 const Home = () => {
   const content = {
     monthlyIncome: "Monthly Income",
@@ -38,6 +40,14 @@ const Home = () => {
             first={content.MTD}
             third={content.totalInvestment}
           />
+        </div>
+        <div className="crud-and-graph">
+          <div className="crud">
+            <Inexcrud />
+          </div>
+          <div className="graph">
+            <Homegraphs />
+          </div>
         </div>
       </div>
     </>
