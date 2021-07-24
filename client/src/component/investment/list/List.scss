@@ -1,0 +1,33 @@
+.list {
+  display: flex;
+  flex-direction: column;
+
+  .heading {
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .table {
+    margin-top: 20px;
+    overflow: scroll;
+    height: 70vh;
+    color: #6a5d5d;
+
+    tr {
+      display: flex;
+      justify-content: space-between;
+
+      td {
+        padding: 0.6rem;
+      }
+    }
+
+    tr:nth-of-type(odd) {
+      background-color: #f3f2f8;
+    }
+  }
+
+  .button {
+    padding-top: 20px;
+  }
+}
