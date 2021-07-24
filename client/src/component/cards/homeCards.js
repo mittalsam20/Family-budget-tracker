@@ -13,7 +13,7 @@ const useStyles = makeStyles({
 });
 
 const HomeCards = (props) => {
-  const { heading, headingColor } = props;
+  const { heading, headingColor, first, second, third } = props;
   const classes = useStyles();
   return (
     <>
@@ -29,8 +29,23 @@ const HomeCards = (props) => {
               {heading}
             </Typography>
 
-            <Typography variant="body2" color="textSecondary" component="p">
-              Month:
+            <Typography variant="body2" component="p">
+              <strong>MTD : </strong>
+              {first}
+              <br />
+              {second && (
+                <>
+                  <strong>Today : </strong>
+                  {second}
+                  <br />
+                </>
+              )}
+              {third && (
+                <>
+                  <strong>Total : </strong>
+                  {third}
+                </>
+              )}
             </Typography>
           </CardContent>
         </CardActionArea>
