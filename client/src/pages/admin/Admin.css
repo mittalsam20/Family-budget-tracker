@@ -1,0 +1,18 @@
+.horizontal-cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.title {
+    padding-top: 40px;
+    font-size: 25px;
+    text-align: center;
+    margin: auto;
+}
+
+.vertical-cards {
+    padding-left: 30%;
+    margin: auto;
+}
+
+
