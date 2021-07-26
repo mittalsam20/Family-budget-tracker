@@ -1,5 +1,6 @@
 .news-cards{
     display: flex;
     flex-wrap: wrap;
-    margin: 20px;
+    justify-content: space-evenly;
+    // margin: 20px;
 }
