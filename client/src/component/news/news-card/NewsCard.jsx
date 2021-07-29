@@ -12,13 +12,18 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 345,
     margin: "20px 0",
+    display: "flex",
+    flexDirection: "column"
   },
   media: {
     height: 140,
   },
+  bottom: {
+    alignContent: "flex-end"
+  }
 });
 
-export default function NewsCard() {
+export default function NewsCard({ title, description, image, url }) {
   const classes = useStyles();
 
   return (
@@ -26,25 +31,21 @@ export default function NewsCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
-          title="Contemplative Reptile"
+          image={image}
+          title="image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {description}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions className={classes.bottom}>
         <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
+          <a href={url} style={{"text-decoration": "none"}}>Learn More</a>
         </Button>
       </CardActions>
     </Card>
