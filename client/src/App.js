@@ -13,7 +13,7 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route path="/" exact component={LogSign} />
+        <Route path="/login" exact component={LogSign} />
         <Route path="/home" exact component={Home} />
         <Route path="/investment" exact component={Investment} />
         <Route path="/news" exact component={News} />

@@ -80,9 +80,7 @@ router.post("/login", async(req, res) => {
                 req.body.logPass,
                 userLogin.password
             );
-            // res.header('Access-Control-Allow-Origin', "*");
-            // res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-            // res.header('Access-Control-Allow-Credentials', true);
+
             if (userLogin && userLogPass) {
                 token = await userLogin.generateAuthToken();
                 console.log("Server is getting token", token);

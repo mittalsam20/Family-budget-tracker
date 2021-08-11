@@ -12,9 +12,44 @@ const userSchema = new mongoose.Schema({
         unique: true
     },
     password: { type: String, required: true },
+    admin: {
+        type: Boolean,
+        default: false,
+        required: true,
+    },
     tokens: [{
         token: {
             type: String,
+            required: true
+        }
+    }],
+    famMembers: [{
+        famMember: {
+            type: String,
+            required: true
+        }
+    }],
+    incomes: [{
+        income: {
+            type: Number,
+            required: true
+        }
+    }],
+    expenses: [{
+        expense: {
+            type: Number,
+            required: true
+        }
+    }],
+    savings: [{
+        saving: {
+            type: Number,
+            required: true
+        }
+    }],
+    investments: [{
+        investment: {
+            type: Number,
             required: true
         }
     }],
