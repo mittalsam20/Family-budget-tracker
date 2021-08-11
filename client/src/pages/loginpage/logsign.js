@@ -26,34 +26,6 @@ const LogSign = () => {
   console.log("inside login page", rootUser);
 
   const history = useHistory();
-  // const callMainPage = async () => {
-  //   try {
-  //     const res = await axios.get("/app/main", {
-  //       withCredentials: true,
-  //     });
-  //     const userdata = await res.data;
-  //     setRootUser(userdata);
-  //     console.log("Root User", rootUser);
-  //     // setUser(userdata);
-  //     if (!res.status === 200) {
-  //       const error = new Error(res.error);
-  //       throw error;
-  //     }
-  //   } catch (err) {
-  //     console.log(
-  //       "Authentication Error..!! Please Login With Correct Credentials..!! ",
-  //       err
-  //     );
-  //     history.push("/");
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   callMainPage();
-  // }, []);
-
-  //   const [validator, setValidator] = useState();
-
   const [InputEmail, setInputEmail] = useState("");
   const [InputPass, setInputPass] = useState("");
   const [InputConfirmPass, setInputConfirmPass] = useState("");
@@ -86,7 +58,7 @@ const LogSign = () => {
       // }
     } catch (err) {
       console.log("error i am finding", err);
-      history.push("/login");
+      history.push("/");
     }
   };
 
