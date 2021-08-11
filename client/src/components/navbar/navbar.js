@@ -1,5 +1,5 @@
 // import "./navbar.scss";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -79,7 +79,10 @@ const Navbar = () => {
               onClose={handleClose}
             >
               <MenuItem onClick={handleClose}>Account Settings</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
+
+              <Link to="/user/settings">
+                <MenuItem onClick={handleClose}>Logout</MenuItem>
+              </Link>
             </Menu>
           </div>
           {/* ------------------------------------------HAMBURGER MENU KA BUTTON--------------------- */}
