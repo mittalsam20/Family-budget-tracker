@@ -4,12 +4,12 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { Doughnut } from "react-chartjs-2";
 // import Button from "@material-ui/core/Button";
-
 import "./cards.css";
 const useStyles = makeStyles({
   root: {
-    minWidth: 500,
-    maxWidth: 510,
+    minWidth: 310,
+    maxWidth: 200,
+    maxHeight: 500,
   },
 });
 
@@ -20,12 +20,12 @@ const cdata = {
       label: "# of Votes",
       data: [12, 19, 3, 5, 2, 3],
       backgroundColor: [
-        "rgba(255, 99, 132, 0.2)",
-        "rgba(54, 162, 235, 0.2)",
-        "rgba(255, 206, 86, 0.2)",
-        "rgba(75, 192, 192, 0.2)",
-        "rgba(153, 102, 255, 0.2)",
-        "rgba(255, 159, 64, 0.2)",
+        "rgba(255, 99, 132, .4)",
+        "rgba(54, 162, 235, .4)",
+        "rgba(255, 206, 86, .4)",
+        "rgba(75, 192, 192, .4)",
+        "rgba(153, 102, 255, .4)",
+        "rgba(255, 159, 64, .4)",
       ],
       borderColor: [
         "rgba(255, 99, 132, 1)",
@@ -35,7 +35,7 @@ const cdata = {
         "rgba(153, 102, 255, 1)",
         "rgba(255, 159, 64, 1)",
       ],
-      borderWidth: 1,
+      borderWidth: 1.5,
     },
   ],
 };
@@ -75,7 +75,9 @@ const HomeCards = (props) => {
             )}
           </Typography>
           <br />
-          <Doughnut data={cdata} />
+          <div style={{ maxWidth: "100%" }}>
+            <Doughnut data={cdata} />
+          </div>
         </CardContent>
       </Card>
       {/* </Button> */}

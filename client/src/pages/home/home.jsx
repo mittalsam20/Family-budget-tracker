@@ -32,9 +32,9 @@ const Home = () => {
             first={content.MTD}
             second={content.today}
           />
-        </div>
+          {/* </div> */}
 
-        <div className="all-cards">
+          {/* <div className="all-cards"> */}
           <HomeCards
             heading="Savings"
             headingColor="green"
