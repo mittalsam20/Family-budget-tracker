@@ -13,13 +13,12 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        {/* <Route path="/" exact component={signup} /> */}
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={LogSign} />
+        <Route path="/home" exact component={Home} />
         <Route path="/investment" exact component={Investment} />
         <Route path="/news" exact component={News} />
         <Route path="/user/settings" exact component={AccountPage} />
         <Route path="/familymanager" exact component={FamilyManager} />
-        <Route path="/login" exact component={LogSign} />
       </Switch>
     </BrowserRouter>
   );

@@ -1,4 +1,4 @@
-import { Carousel } from "react-bootstrap";
+// import { Carousel } from "react-bootstrap";
 
 import withAutoplay from "react-awesome-slider/dist/autoplay";
 import AwesomeSlider from "react-awesome-slider";

@@ -68,7 +68,7 @@ export default function Rightdrawer({ setCategory }) {
       </List>
       <Divider />
       <List>
-        <Link to="/" className={classes.linkstyle}>
+        <Link to="/home" className={classes.linkstyle}>
           <ListItem style={{ height: 40, borderRadius: 5 }} button>
             <ListItemText primary="Home" />
           </ListItem>

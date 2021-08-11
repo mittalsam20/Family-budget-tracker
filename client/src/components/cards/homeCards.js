@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import { Doughnut } from "react-chartjs-2";
+import { Doughnut, Line } from "react-chartjs-2";
 // import Button from "@material-ui/core/Button";
 import "./cards.css";
 const useStyles = makeStyles({
@@ -13,7 +13,31 @@ const useStyles = makeStyles({
   },
 });
 
-const cdata = {
+const ldata = {
+  labels: ["1", "2", "3", "4", "5", "6"],
+  datasets: [
+    {
+      label: "# of Votes",
+      data: [12, 19, 3, 5, 2, 3],
+      fill: false,
+      backgroundColor: "rgb(255, 99, 132)",
+      borderColor: "rgba(255, 99, 132, 0.2)",
+    },
+  ],
+};
+
+const options = {
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true,
+        },
+      },
+    ],
+  },
+};
+const pdata = {
   labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
   datasets: [
     {
@@ -57,26 +81,22 @@ const HomeCards = (props) => {
             {heading}
           </Typography>
           <Typography variant="body2" component="p">
-            <strong>MTD : </strong>
-            {first}
-            <br />
+            <strong> MTD: </strong> {first} <br />
             {second && (
               <>
-                <strong>Today : </strong>
-                {second}
-                <br />
+                <strong> Today: </strong> {second} <br />
               </>
             )}
             {third && (
               <>
-                <strong>Total : </strong>
-                {third}
+                <strong> Total: </strong> {third}
               </>
             )}
           </Typography>
           <br />
           <div style={{ maxWidth: "100%" }}>
-            <Doughnut data={cdata} />
+            <Line data={ldata} options={options} />
+            {/* <Doughnut data={pdata} /> */}
           </div>
         </CardContent>
       </Card>
