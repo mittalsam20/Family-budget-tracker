@@ -9,7 +9,7 @@ const cors = require("cors");
 router.use(cors());
 router.use(bodyParser.urlencoded({ extended: true }));
 const user = require("../models/signupmodels");
-const AuthMid = require("../middleware/authmid");
+const AuthMid = require("../middlewares/authmid");
 
 
 router.post("/signup", async(req, res) => {
@@ -86,7 +86,7 @@ router.post("/login", async(req, res) => {
             if (userLogin && userLogPass) {
                 token = await userLogin.generateAuthToken();
                 console.log("Server is getting token", token);
-                res.cookie("stgUserToken", token, {
+                res.cookie("swingProfitToken", token, {
                     expires: new Date(Date.now() + 25892000000),
                     httpOnly: true,
                 });
@@ -152,7 +152,7 @@ router.get("/main", AuthMid, (req, res) => {
 
 router.get("/logout", (req, res) => {
     console.log("loging out initiated");
-    res.clearCookie("stgUserToken", { path: "/" });
+    res.clearCookie("swingProfitToken", { path: "/" });
     res.status(200).send("User LoggedOut");
 });
 module.exports = router;

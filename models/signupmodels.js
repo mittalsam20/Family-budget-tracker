@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
+
 const userSchema = new mongoose.Schema({
     fullName: {
         type: String,
@@ -21,7 +22,7 @@ const userSchema = new mongoose.Schema({
 })
 
 userSchema.methods.generateAuthToken = async function() {
-    let curtoken = jwt.sign({ _id: this._id }, "illbethebestworkharder")
+    let curtoken = jwt.sign({ _id: this._id }, "workHarderThanAnyonePresentOnThisEarth")
     this.tokens = this.tokens.concat({ token: curtoken })
     await this.save();
     return curtoken;
