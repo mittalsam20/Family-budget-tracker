@@ -575,7 +575,7 @@ const LogSign = () => {
                         };
                         console.log(reg);
                         axios
-                          .post("http://localhost:5000/app/signup", reg)
+                          .post("/app/signup", reg)
                           .then((res) => {
                             console.log(
                               "seeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
