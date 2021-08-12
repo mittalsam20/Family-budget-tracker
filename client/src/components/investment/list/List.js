@@ -16,7 +16,7 @@ const List = () => {
 
   const [stocks, setStocks] = useState(people);
 
-  console.log("hi", stocks);
+  //console.log("hi", stocks);
   const [searchResult, setSearchResult] = useState("");
   // const [urls, setUrls] = useState([]);
 
@@ -43,11 +43,11 @@ const List = () => {
 
   useEffect(() => {
     setStocks(people);
-    console.log(searchResult);
+    //console.log(searchResult);
     const filterStocks = stocks.filter((stock) => {
       stock.toLowerCase().includes(searchResult.toLowerCase());
     });
-    console.log(filterStocks);
+    // console.log(filterStocks);
     setStocks(filterStocks);
   }, [searchResult]);
 
@@ -64,7 +64,7 @@ const List = () => {
       />
 
       <div className="table">
-        {console.log("roh", stocks)}
+        {/* {console.log("roh", stocks)} */}
         {stocks &&
           stocks.map((stock) => {
             <Stock stock={stock} />;
