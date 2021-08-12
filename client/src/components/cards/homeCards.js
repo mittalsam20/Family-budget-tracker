@@ -5,11 +5,12 @@ import Typography from "@material-ui/core/Typography";
 import { Doughnut, Line } from "react-chartjs-2";
 // import Button from "@material-ui/core/Button";
 import "./cards.css";
+
 const useStyles = makeStyles({
   root: {
     minWidth: 310,
-    maxWidth: 200,
-    maxHeight: 500,
+    maxWidth: 210,
+    maxHeight: 700,
   },
 });
 
@@ -96,7 +97,7 @@ const HomeCards = (props) => {
           <br />
           <div style={{ maxWidth: "100%" }}>
             <Line data={ldata} options={options} />
-            {/* <Doughnut data={pdata} /> */}
+            <Doughnut data={pdata} />
           </div>
         </CardContent>
       </Card>

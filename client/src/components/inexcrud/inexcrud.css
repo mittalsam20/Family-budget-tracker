@@ -1,0 +1,11 @@
+.formContTop {
+    width: 100vw;
+}
+
+.formCont {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: flex-start;
+}

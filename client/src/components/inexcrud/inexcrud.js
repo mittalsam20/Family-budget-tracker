@@ -19,7 +19,7 @@ import {
 // import formatDate from "../utils/formatdate";
 import { useSpeechContext } from "@speechly/react-client";
 // import Alert from "./alert";
-
+import "./inexcrud.css";
 const useStyles = makeStyles(() => ({
   radioGroup: {
     display: "flex",
@@ -117,91 +117,93 @@ const Inexcrud = () => {
 
   return (
     <>
-      <div>
-        <FormControl
-          style={{
-            paddingBottom: "15px",
-            width: "200px",
-            paddingRight: "40px",
-          }}
-        >
-          <InputLabel>Type</InputLabel>
-          <Select
-            // value={formData.type}
-            onChange={(e) => {
-              // setFormData({ ...formData, type: e.target.value });
+      <div className="formContTop">
+        <div className="formCont">
+          <FormControl
+            style={{
+              paddingBottom: "15px",
+              width: "200px",
+              paddingRight: "40px",
             }}
           >
-            <MenuItem value="Income">Income</MenuItem>
-            <MenuItem value="Expense">Expense</MenuItem>
-            <MenuItem value="Saving">Saving</MenuItem>
-            <MenuItem value="Investment">Investment</MenuItem>
-          </Select>
-        </FormControl>
-        <FormControl
-          style={{
-            paddingBottom: "15px",
-            width: "200px",
-            paddingRight: "40px",
-          }}
-        >
-          <InputLabel>Category</InputLabel>
-          <Select
-            // value={formData.category}
-            onChange={(e) => {
-              // setFormData({ ...formData, category: e.target.value });
+            <InputLabel>Type</InputLabel>
+            <Select
+              // value={formData.type}
+              onChange={(e) => {
+                // setFormData({ ...formData, type: e.target.value });
+              }}
+            >
+              <MenuItem value="Income">Income</MenuItem>
+              <MenuItem value="Expense">Expense</MenuItem>
+              <MenuItem value="Saving">Saving</MenuItem>
+              <MenuItem value="Investment">Investment</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl
+            style={{
+              paddingBottom: "15px",
+              width: "200px",
+              paddingRight: "40px",
             }}
           >
-            {/* {selectedCat.map((c) => (
+            <InputLabel>Category</InputLabel>
+            <Select
+              // value={formData.category}
+              onChange={(e) => {
+                // setFormData({ ...formData, category: e.target.value });
+              }}
+            >
+              {/* {selectedCat.map((c) => (
                   <MenuItem Key={c.type} value={c.type}>
                     {c.type}
                   </MenuItem>
                 ))} */}
-          </Select>
-        </FormControl>
-        <FormControl
-          style={{
-            paddingBottom: "15px",
-            width: "200px",
-            paddingRight: "40px",
-          }}
-        >
-          <TextField
-            type="number"
-            label="Amount"
-            // value={formData.amount}
-            onChange={(e) => {
-              // setFormData({ ...formData, amount: e.target.value });
+            </Select>
+          </FormControl>
+          <FormControl
+            style={{
+              paddingBottom: "15px",
+              width: "200px",
+              paddingRight: "40px",
             }}
-          />
-        </FormControl>
-        <FormControl
-          style={{
-            paddingBottom: "15px",
-            width: "200px",
-            paddingRight: "40px",
-          }}
-        >
-          <TextField
-            type="date"
-            label="Date"
-            placeholder=""
-            // value={formData.date}
-            onChange={(e) => {
-              // setFormData({ ...formData, date: formatDate(e.target.value) });
+          >
+            <TextField
+              type="number"
+              label="Amount"
+              // value={formData.amount}
+              onChange={(e) => {
+                // setFormData({ ...formData, amount: e.target.value });
+              }}
+            />
+          </FormControl>
+          <FormControl
+            style={{
+              paddingBottom: "15px",
+              width: "200px",
+              paddingRight: "40px",
             }}
-          />
-        </FormControl>
-        <Button
-          className={classes.button}
-          variant="outlined"
-          color="primary"
-          onClick={() => {
-            // createTransaction();
-          }}
-        >
-          Create
-        </Button>
+          >
+            <TextField
+              type="date"
+              label="Date"
+              placeholder=""
+              // value={formData.date}
+              onChange={(e) => {
+                // setFormData({ ...formData, date: formatDate(e.target.value) });
+              }}
+            />
+          </FormControl>
+          <Button
+            className={classes.button}
+            variant="outlined"
+            color="primary"
+            onClick={() => {
+              // createTransaction();
+            }}
+          >
+            Create
+          </Button>
+        </div>
       </div>
     </>
   );
