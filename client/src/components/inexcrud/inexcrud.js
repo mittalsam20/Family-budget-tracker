@@ -9,6 +9,12 @@ import {
   Select,
   MenuItem,
 } from "@material-ui/core";
+import {
+  PushToTalkButtonContainer,
+  PushToTalkButton,
+  ErrorPanel,
+} from "@speechly/react-ui";
+import { SpeechState, useSpeechContext } from "@speechly/react-client";
 import { useState, useContext, useEffect } from "react";
 // import { ExpenseTracker } from "../context/context";
 import { v4 as uuidv4 } from "uuid";
@@ -17,7 +23,6 @@ import {
   expenseCategories,
 } from "../../constants/categories";
 // import formatDate from "../utils/formatdate";
-import { useSpeechContext } from "@speechly/react-client";
 // import Alert from "./alert";
 import "./inexcrud.css";
 const useStyles = makeStyles(() => ({
@@ -203,6 +208,10 @@ const Inexcrud = () => {
           >
             Create
           </Button>
+          <PushToTalkButtonContainer>
+            <PushToTalkButton />
+            <ErrorPanel />
+          </PushToTalkButtonContainer>
         </div>
       </div>
     </>
