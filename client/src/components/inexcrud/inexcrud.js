@@ -208,10 +208,12 @@ const Inexcrud = () => {
           >
             Create
           </Button>
-          <PushToTalkButtonContainer>
-            <PushToTalkButton />
-            <ErrorPanel />
-          </PushToTalkButtonContainer>
+          <div style={{ position: "absolute" }}>
+            <PushToTalkButtonContainer>
+              <PushToTalkButton />
+              <ErrorPanel />
+            </PushToTalkButtonContainer>
+          </div>
         </div>
       </div>
     </>
